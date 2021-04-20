@@ -14,16 +14,16 @@ main() async {
   // Add the interceptor with optional options
   dio.interceptors.add(RetryInterceptor(
     dio: dio,
-    logger: Logger("Retry"),
+    logger: Logger('Retry'),
     options: const RetryOptions(
-      retryInterval: const Duration(seconds: 5),
+      retryInterval: Duration(seconds: 5),
     ),
   ));
 
   /// Sending a failing request for 3 times with a 5s interval
   try {
-    await dio.get("http://www.mqldkfjmdisljfmlksqdjfmlkj.dev");
+    await dio.get('http://www.apple111.com');
   } catch (e) {
-    print("End error : $e");
+    print('End error : $e');
   }
 }
